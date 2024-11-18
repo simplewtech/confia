@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e8c3c14ff33b199b4a0838993eb8423",
+    "content-hash": "6cf5d486eeaf8a09325a3f966e4c4c01",
     "packages": [
         {
             "name": "brick/math",
@@ -134,6 +134,59 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "coreui/coreui",
+            "version": "v5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coreui/coreui.git",
+                "reference": "7f5ba61467094ca553506e070a71cb738798b52b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coreui/coreui/zipball/7f5ba61467094ca553506e070a71cb738798b52b",
+                "reference": "7f5ba61467094ca553506e070a71cb738798b52b",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The CoreUI Team",
+                    "homepage": "https://github.com/orgs/coreui/people"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile-first projects on the web rewritten and maintain by the CoreUI Team",
+            "homepage": "https://coreui.io/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/coreui/coreui/issues",
+                "source": "https://github.com/coreui/coreui/tree/v5.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://coreui.io/pricing/?support=true",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/coreui",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-08-22T12:19:36+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2396,6 +2449,67 @@
                 }
             ],
             "time": "2024-07-20T21:41:07+00:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/predis/predis.git",
+                "reference": "b1d3255ed9ad4d7254f9f9bba386c99f4bb983d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/predis/predis/zipball/b1d3255ed9ad4d7254f9f9bba386c99f4bb983d1",
+                "reference": "b1d3255ed9ad4d7254f9f9bba386c99f4bb983d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.3",
+                "phpstan/phpstan": "^1.9",
+                "phpunit/phpunit": "^8.0 || ~9.4.4"
+            },
+            "suggest": {
+                "ext-relay": "Faster connection with in-memory caching (>=0.6.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Till Krüss",
+                    "homepage": "https://till.im",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A flexible and feature-complete Redis client for PHP.",
+            "homepage": "http://github.com/predis/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "support": {
+                "issues": "https://github.com/predis/predis/issues",
+                "source": "https://github.com/predis/predis/tree/v2.2.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/tillkruss",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-09-13T16:42:03+00:00"
         },
         {
             "name": "psr/clock",
