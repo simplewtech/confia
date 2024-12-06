@@ -11,44 +11,44 @@
                             class="hide-menu">Dashboard</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('empresas.index')}}" aria-expanded="false"><i class=" far fa-building"></i><span
+                        href="{{route('empresa.index')}}" aria-expanded="false"><i class=" far fa-building"></i><span
                             class="hide-menu">Empresas</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('ubicaciones.index')}}" aria-expanded="false"><i class=" fas fa-map-marker-alt"></i><span
+                        href="{{route('ubicacion.index')}}" aria-expanded="false"><i class=" fas fa-map-marker-alt"></i><span
                             class="hide-menu">Ubicaciones</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('familias.index')}}" aria-expanded="false"><i class=" fas fa-dolly-flatbed"></i><span
+                        href="{{route('familia.index')}}" aria-expanded="false"><i class=" fas fa-dolly-flatbed"></i><span
                             class="hide-menu">Familias</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                    href="{{route('movimientos.index')}}" aria-expanded="false"><i class=" far fa-folder-open"></i><span class="hide-menu">Movimientos</span></a></li>
+                    href="{{route('movimiento.index')}}" aria-expanded="false"><i class=" far fa-folder-open"></i><span class="hide-menu">Movimientos</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('tipo-movimientos.index')}}" aria-expanded="false"><i class=" far fa-chart-bar"></i><span
+                        href="{{route('tipo-movimiento.index')}}" aria-expanded="false"><i class=" far fa-chart-bar"></i><span
                             class="hide-menu">Tipo Movimientos</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('movimientos-detalles.index')}}" aria-expanded="false"><i class=" fas fa-chart-line"></i><span
+                        href="{{route('movimiento-detalle.index')}}" aria-expanded="false"><i class=" fas fa-chart-line"></i><span
                             class="hide-menu">Movimientos Detalles</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('personas.index')}}" aria-expanded="false"><i class=" far fa-user"></i><span
+                        href="{{route('persona.index')}}" aria-expanded="false"><i class=" far fa-user"></i><span
                             class="hide-menu">Personas</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('tipo-personas.index')}}" aria-expanded="false"><i class=" far fa-address-book"></i><span
+                        href="{{route('tipo-persona.index')}}" aria-expanded="false"><i class=" far fa-address-book"></i><span
                             class="hide-menu">Tipo Personas</span></a></li>
 
 
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('productos.index')}}" aria-expanded="false"><i
+                        href="{{route('producto.index')}}" aria-expanded="false"><i
                             class=" fas fa-boxes"></i><span class="hide-menu">Productos</span></a></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('inventarios.index')}}" aria-expanded="false"><i
+                        href="{{route('inventario.index')}}" aria-expanded="false"><i
                             class=" fas fa-clipboard-list"></i><span class="hide-menu">Inventarios</span></a></li>
 
 
