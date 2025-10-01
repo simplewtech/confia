@@ -51,12 +51,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Dashboard</h4>
+                        <h4 class="page-title">@yield('bread', 'Inicio')</h4>
                         <div class="ms-auto text-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="#">Volver</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">@yield('bread', 'Inicio')</li>
                                 </ol>
                             </nav>
                         </div>
@@ -67,11 +67,12 @@
             <div class="container-fluid">
                 @yield('contenido')
             </div>
-            <!-- footer -->
         </div>
         <!-- End Page wrapper  -->
     </div>
     <!-- End Wrapper -->
+    <!-- footer -->
+    @include('layouts.footer')
 
     <!-- All Jquery -->
     <script src="{{ asset('assets/back/libs/jquery/dist/jquery.min.js') }}"></script>
