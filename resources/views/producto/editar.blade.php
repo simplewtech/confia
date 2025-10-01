@@ -23,9 +23,9 @@
                             <label for="familias_id" class="col-sm-3 text-end control-label col-form-label">Familia</label>
                             <div class="col-sm-9">
                                 <select name="familia_id" class="form-control" id="familia_id">
-                                    <option value="{{old('familia_id', $producto->familia_id ?? '')}}">Selecciona una familia</option>
+                                    <option value="">Selecciona una familia</option>
                                     @foreach ($familia as $key => $value)
-                                        <option value="{{ $key }}">{{ $value }}</option>
+                                        <option value="{{ $key }}" @selected(old('familia_id', $producto->familia_id ?? '') == $key)>{{ $value }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -35,9 +35,9 @@
                                 class="col-sm-3 text-end control-label col-form-label">Ubicación</label>
                             <div class="col-sm-9">
                                 <select name="ubicacion_id" class="form-control" id="ubicacion_id">
-                                    <option value="{{old('ubicacion_id', $producto->ubicacion_id ?? '')}}">Selecciona una Ubicación</option>
+                                    <option value="">Selecciona una Ubicación</option>
                                     @foreach ($ubicacion as $key => $value)
-                                        <option value="{{ $key }}">{{ $value }}</option>
+                                        <option value="{{ $key }}" @selected(old('ubicacion_id', $producto->ubicacion_id ?? '') == $key)>{{ $value }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -2,3 +2,55 @@ label.requerido::after {
     content: "*";
     color: #e73d4a;
 }
+
+.card-header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.acciones_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    width: 2rem;
+    height: 2rem;
+    padding: 10px;
+}
+
+.icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_error {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: red;
+    border: 1px solid;
+    border-radius: 7%;
+    border-color: white;
+}
+
+.form_correcto {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}

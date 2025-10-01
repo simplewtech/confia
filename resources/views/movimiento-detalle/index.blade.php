@@ -71,19 +71,17 @@ Movimientos Detalles
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Empresa Info</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Movimiento Detalle Info</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 @foreach ($datas as $data)
                     <ul>
+                        <li>{{$data->movimiento_id}}</li>
+                        <li>{{$data->producto_id}}</li>
                         <li>{{$data->nombre}}</li>
-                        <li>{{$data->nit}}</li>
-                        <li>{{$data->regimen}}</li>
-                        <li>{{$data->representante_legal}}</li>
-                        <li>{{$data->documento_representante_legal}}</li>
-                        <li>{{$data->direccion}}</li>
-                        <li>{{$data->telefono}}</li>
+                        <li>{{$data->cantidad}}</li>
+                        <li>{{$data->valor}}</li>
                     </ul>
                 @endforeach
             </div>

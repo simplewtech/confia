@@ -8,20 +8,20 @@
 @section('titulo')
 Ubicaciones
 @endsection
-<div class="row">
-    <div class="card-header">
-        <div class="d-md-flex justify-content-md-end">
-            <a class="btn btn-info" href="{{route('ubicacion.create')}}" role="button">Nuevo Registro</a>
-        </div>
-        <h5 class="card-title">Ubicaciones</h5>
+<div class="card rounded-1">
+    <div class="card-header bg-info text-white">
+        <div class="card-toolbar">
+            <h3 class="card-title fw-bold"><i class="fas fa-map-marker-alt pe-2 fs-2"></i>Ubicaciones</h3>
+                <a href="{{ route('ubicacion.create') }}" class="btn btn-success ms-3 fw-bolder text-white"><i class="fas fa-plus-circle fs-4 me-1"></i>Nuevo Registro</a>
     </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table id="tabla_dinamica" class="table table-striped table-bordered">
-                    <thead>
+</div>
+        <div class="card-body rounded-1">
+            <div class="table-responsive border pt-3 pb-3">
+                <table id="tabla_dinamica" class="table table-striped table-bordered border-top border-bottom align-middle pe-0 pl-0 me-0 ml-0">
+                    <thead class="fw-bold fs-5">
                         <tr>
                             <th>Nombre</th>
-                            <th>Acciones</th>
+                            <th class="no-sort no-search w-30px">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,19 +29,14 @@ Ubicaciones
                             <tr>
                                 <td>{{$data->nombre}}</td>
                                 <td>
-                                    <div class="container text-center">
-                                        <div class="row justify-content-md-end">
-                                            <div class="co col-lg-1">
-                                                <a class="btn btn-sm btn-outline" href="{{route('ubicacion.edit', $data->id)}}"><i class=" fas fa-pencil-alt" style="color:blue; font-size:1.5rem"></i></a>
-                                            </div>
-
-                                        <div class="col col-lg-1">
-                                            <form action="{{ route('ubicacion.destroy', $data->id) }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit"  class="btn btn-outline btn-sm g-col-4"><i class="fas fa-trash-alt" style="color: red; font-size:1.5rem"></i></button>
-                                            </form>
-                                        </div>
+                                    <div class="container text-center acciones">
+                                        <a class="btn btn-sm btn-outline box bg-success acciones_button" href="{{ route('ubicacion.edit', $data->id) }}" role="button"><i class="icono fas fa-pencil-alt" style="color:white; font-size:1.5rem"></i></a>
+                                        <form action="{{ route('ubicacion.destroy', $data->id) }}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-outline btn-sm box bg-danger acciones_button"><i class="" data-bs-dismiss="modal" aria-label="Close"><i class="icono fas fa-trash-alt" style="color: white; font-size:1.5rem"></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

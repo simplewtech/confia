@@ -9,16 +9,15 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a class="btn btn-danger me-md-2 text-white" href="{{route('ubicacion.index')}}" role="button">Cancelar</a>
+            <div class="card-header bg-success">
+                <div class="card-toolbar">
+                    <h3 class="card-title text-white text-center"><i class="fas fa-plus-circle pe-2"></i>Crear nueva ubicación</h3>
+                    <a class="btn btn-danger text-white me-md-2" href="{{ route('ubicacion.index') }}" role="button">Volver al listado</a>
                 </div>
-                <h4 class="card-title">Crear nueva ubicación</h4>
             </div>
-            <form class="form-horizontal" action="{{ route('ubicacion.store') }}"  method="POST">
-                @csrf
-                <div class="card-body">
-
+        <form class="form-horizontal" action="{{ route('ubicacion.store') }}"  method="POST">
+            @csrf
+            <div class="card-body">
                     <div class="form-group row">
                         <label for="nombre"
                             class="col-sm-3 text-end control-label col-form-label">Nombre</label>

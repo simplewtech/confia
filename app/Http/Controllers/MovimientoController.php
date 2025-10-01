@@ -28,7 +28,7 @@ class MovimientoController extends Controller
     {
         $tipo_movimiento = TipoMovimiento::get()->pluck('nombre', 'id');
         $persona = Persona::get()->pluck('nombre', 'id');
-        return view('movimiento.form', compact('tipo_movimiento', 'persona'));
+        return view('movimiento.crear', compact('tipo_movimiento', 'persona'));
     }
 
     /**

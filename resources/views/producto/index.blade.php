@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('scripts')
+    <script src="{{asset('assets/back/js/pages/producto/index.js')}}"></script>
+@endsection
 @section('contenido')
 @if ($mensaje = session('mensaje'))
     <div class="alert alert-success d-flex flex-column mb-3">
@@ -35,7 +38,7 @@ Productos
                         <tr>
                             <td>{{$data->familia_id}}</td>
                             <td>{{$data->ubicacion_id}}</td>
-                            <td>{{$data->nombre}}</td>
+                            <td id="modal-element">{{$data->nombre}}</td>
                             <td>{{$data->codigo}}</td>
                             <td>{{$data->valor_venta}}</td>
                             <td>{{$data->valor_compra}}</td>
@@ -48,7 +51,7 @@ Productos
                                 </div>
 
                                 <div class="col col-lg-2">
-                                    <a class="btn btn-sm btn-outline" href="#" data-bs-toggle="modal" data-bs-target="#modal" role="button"><i class=" fas fa-eye" style="color:darkgoldenrod; font-size:1.5rem"></i></a>
+                                    <a class="btn btn-sm btn-outline" href="#" data-bs-toggle="modal" data-bs-target="#modal-producto" data-nombre="{{ $data->nombre }}" data-codigo="{{$data->codigo}}" role="button" id="botonmodal"><i class=" fas fa-eye" style="color:darkgoldenrod; font-size:1.5rem"></i></a>
                                 </div>
 
                                 <div class="col col-lg-2">
@@ -71,46 +74,34 @@ Productos
     </div>
 </div>
 <!-- Modal -->
-<div class="modal fade modal-fullscreen-md-down" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-fullscreen-md-down" id="modal-producto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Empresa Info</h1>
+                <h1 class="modal-title fs-5" id="modal-producto">Producto Info</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                @foreach ($datas as $data)
-                    <ul>
-                        <li>{{$data->nombre}}</li>
-                        <li>{{$data->nit}}</li>
-                        <li>{{$data->regimen}}</li>
-                        <li>{{$data->representante_legal}}</li>
-                        <li>{{$data->documento_representante_legal}}</li>
-                        <li>{{$data->direccion}}</li>
-                        <li>{{$data->telefono}}</li>
-                    </ul>
-                @endforeach
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger text-white" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-    </div>
-    </div>
-</div>
-<!-- Modal -->
-<div class="modal fade modal-fullscreen-md-down" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Familia Info</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                @foreach ($datas as $data)
-                    <ul>
-                        <li>{{$data->nombre}}</li>
-                    </ul>
-                @endforeach
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Nombre: </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="nombreproducto">
+                  </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Codigo: </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="codigoproducto">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Valor: </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="valorproducto">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Cantidad: </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="cantidadproducto">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Total: </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="totalproducto">
+                  </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger text-white" data-bs-dismiss="modal">Cerrar</button>

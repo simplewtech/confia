@@ -1,3 +1,3 @@
 <footer class="footer text-center">
-    Desarrollado por orangetechnologycompany <a href="https://www.orangetechnologycompany.com">OTC Software</a>.
+    All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://www.wrappixel.com">WrapPixel</a>.
 </footer>

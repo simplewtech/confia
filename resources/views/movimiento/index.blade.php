@@ -8,23 +8,23 @@
 @section('titulo')
 Movimientos
 @endsection
-<div class="row">
-    <div class="card-header">
-        <div class="d-md-flex justify-content-md-end">
-            <a class="btn btn-info" href="{{route('movimiento.create')}}" role="button">Nuevo Registro</a>
+<div class="card rounded-1">
+    <div class="card-header bg-info text-white">
+        <div class="card-toolbar">
+            <h3 class="card-title fw-bold"><i class="fas fa-folder-open pe-2 fs-2"></i>Movimiento</h3>
+            <a href="{{ route('movimiento.create') }}" class="btn btn-success ms-3 fw-bolder text-white"><i class="fas fa-plus-circle fs-4 me-1"></i>Nuevo Registro</a>
         </div>
-        <h5 class="card-title">Movimientos</h5>
     </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table id="tabla_dinamica" class="table table-striped table-bordered">
-                <thead>
+<div class="card-body rounded-1">
+        <div class="table-responsive border pt-3 pb-3">
+            <table id="tabla_dinamica" class="table table-striped table-bordered border-top border-bottom align-middle pe-0 pl-0 me-0 ml-0">
+                <thead class="fw-bold fs-5">
                     <tr>
                         <th>Tipo movimiento ID</th>
                         <th>Persona ID</th>
                         <th>Nombre</th>
                         <th>Fecha</th>
-                        <th>Acciones</th>
+                        <th class="w-30px">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,20 +35,13 @@ Movimientos
                             <td>{{$data->nombre}}</td>
                             <td>{{$data->fecha}}</td>
                             <td>
-                                <div class="container text-center">
-                                    <div class="row justify-content-md-end">
-                                        <div class="col col-lg-1">
-                                            <a class="btn btn-sm btn-outline" href="{{route('movimiento.edit', $data->id)}}"><i class=" fas fa-pencil-alt" style="color:blue; font-size:1.5rem"></i></a>
-                                        </div>
-
-                                    <div class="col col-lg-1">
-                                        <form action="{{ route('movimiento.destroy', $data->id) }}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit"  class="btn btn-outline btn-sm g-col-4"><i class="fas fa-trash-alt" style="color: red; font-size:1.5rem"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
+                                <div class="container text-center acciones">
+                                    <a class="btn btn-sm btn-outline box bg-success acciones_button" href="{{route('movimiento.edit', $data->id)}}"><i class=" fas fa-pencil-alt" style="color:white; font-size:1.5rem"></i></a>
+                                    <form action="{{ route('movimiento.destroy', $data->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"  class="btn btn-sm btn-outline box bg-danger acciones_button"><i class="fas fa-trash-alt" style="color: white; font-size:1.5rem"></i></button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
@@ -57,7 +50,6 @@ Movimientos
                 </tfoot>
             </table>
         </div>
-
     </div>
 </div>
 <!-- Modal -->

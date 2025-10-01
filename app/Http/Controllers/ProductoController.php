@@ -7,7 +7,6 @@ use App\Models\Familia;
 use App\Models\Producto;
 use App\Models\Ubicacion;
 use Illuminate\Http\Request;
-
 class ProductoController extends Controller
 {
     /**

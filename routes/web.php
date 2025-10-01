@@ -12,12 +12,19 @@ use App\Http\Controllers\TipoPersonaController;
 use App\Http\Controllers\UbicacionController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+
+Route::view('/', 'layouts.app');
 
 
-// Rutas empresas con controller
+/**
+ * GET: Conseguir datos
+ * POST: Guardar datos o recursos
+ * PUT/PATCH: Actualizar recursos
+ * DELETE: Eliminar recursos
+ */
+
+
+// Rutas con controller
 
 // Route::controller(FamiliaController::class)->prefix('familia')->group(function () {
 //     Route::get('', 'index')->name('familia.index');
@@ -27,7 +34,6 @@ Route::get('/', function () {
 //     Route::post('/actualizar{$id}', 'update')->name('familia.update');
 //     Route::post('/eliminar{$id}', 'delete')->name('familia.destroy');
 // });
-
 
 
 //Rutas Resources
@@ -41,7 +47,7 @@ Route::resources([
     'producto' => ProductoController::class,
     'tipo-movimiento' => TipoMovimientoController::class,
     'tipo-persona' => TipoPersonaController::class,
-    'ubicacion' => UbicacionController::class
+    'ubicacion' => UbicacionController::class,
 ]);
 
 
@@ -49,3 +55,6 @@ Route::resources([
 Route::resource('familia', FamiliaController::class)->parameters([
     'familia' => 'familia'
 ]);
+
+
+
